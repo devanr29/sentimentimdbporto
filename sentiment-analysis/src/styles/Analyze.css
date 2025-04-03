@@ -1,0 +1,88 @@
+
+.input-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--gray-200);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+  
+  .loader {
+    margin: 2rem 0;
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--gray-200);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .results {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sentiment-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .sentiment-bar .label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .bar {
+    height: 8px;
+    background: var(--gray-200);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .fill {
+    height: 100%;
+    transition: width 1s ease-out;
+  }
+  
+  .fill.positive {
+    background: var(--primary);
+  }
+  
+  .fill.negative {
+    background: #ef4444;
+  }
+  
+  @media (max-width: 640px) {
+    .input-container {
+      flex-direction: column;
+    }
+    
+    .button {
+      width: 100%;
+    }
+  }
+  
